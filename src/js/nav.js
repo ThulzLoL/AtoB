@@ -14,4 +14,3 @@ function menuToogle() {
 }
 
 menuBtn.onclick = menuToogle;
-console.log('hello');

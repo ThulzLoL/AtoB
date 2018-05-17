@@ -1,21 +1,49 @@
-body {
-  margin: 0; }
-
-.header {
-  width: 100%;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 74px;
-  background-color: red;
-  z-index: -1; }
+  width: 100%;
+  overflow: hidden;
+  background-color: #233c7b; }
+  header nav {
+    display: none;
+    height: 100%;
+    width: 0;
+    background-color: #233c7b;
+    top: 74px;
+    right: 0;
+    overflow-x: hidden;
+    position: fixed;
+    z-index: 1; }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 30px 30px;
+      text-align: center; }
+  header .logo p {
+    margin: 0 15px;
+    box-sizing: border-box;
+    font-size: 30px;
+    color: white; }
+  header .menuBtn {
+    margin: 0 15px; }
+  header .menuDesktop {
+    display: none; }
+    header .menuDesktop a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px; }
 
-.sideMenu {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  background-color: black;
-  left: 50%;
-  display: none; }
-  .sideMenu .sideMenuEle {
-    margin: auto; }
+@media only screen and (min-width: 780px) {
+  header .menuBtn {
+    display: none; }
+  header .menuDesktop {
+    display: block; } }
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif; }
 
 .pgOne .banner {
   width: 100%; }
