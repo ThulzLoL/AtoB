@@ -4,6 +4,16 @@ body{
 .header{
     width: 100%;
 }
+.sideMenu{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    left: 50%;
+    .sideMenuEle{
+        margin: auto
+    }
+}
 .pgOne{
     .banner{
         width: 100%;
