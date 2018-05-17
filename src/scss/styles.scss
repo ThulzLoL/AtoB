@@ -1,3 +1,71 @@
 body{
     margin: 0;
 }
+.header{
+    width: 100%;
+}
+.pgOne{
+    .banner{
+        width: 100%;
+    }
+    .intro{
+        width: 100%;
+        display: inline-flex;
+        .intOne{
+            width: 33%;
+            img{
+                margin: auto;
+            }
+        }
+        .intTwo{
+            width: 33%;
+            img{
+                margin: auto;
+            }
+        }
+        .intThree{
+            width: 33%;
+            img{
+                margin: auto;
+            }
+        }
+    }
+    .cat{
+        width: 100%;
+        display: inline-flex;
+        .catLeft{
+            width: 50%;
+        }
+        .catRight{
+            height: 100%;
+            width: 50%;
+            display: inline-flex;
+            .catRightUp{
+                width: 100%;
+                height: 50%;
+                .catRightUpLeft{
+                    width: 50%;
+                }
+                .catRightUpRight{
+                    width: 50%;
+                }
+            }
+            .catRightDown{
+                width: 100%;
+                height: 50%;
+                .catRightDownLeft{
+                    width: 50%;
+                }
+                .catRightDownRight{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+.pgTwo{
+    display: none;
+}
+.pgThree{
+    display: none;
+}
