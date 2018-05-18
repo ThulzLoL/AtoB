@@ -12,6 +12,7 @@ let categorias = {
         {
             nome:"lasanha",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg"
         },
         {
             nome:"lasanha",

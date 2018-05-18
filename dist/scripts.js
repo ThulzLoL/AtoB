@@ -18,6 +18,11 @@ function addCart (id){
     
         
 }
+let comidaImgOne = document.querySelector(".imgOne");
+
+function filterComida(){
+    comidaImgOne.src = categorias.food[2].img;
+}
 let loginBtn = document.querySelector('#login');
 
 function signIn(){
@@ -68,6 +73,7 @@ let categorias = {
         {
             nome:"lasanha",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg"
         },
         {
             nome:"lasanha",
