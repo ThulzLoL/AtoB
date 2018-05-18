@@ -1,67 +1,157 @@
-body {
-  margin: 0; }
-
-.header {
-  width: 100%;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 74px;
-  background-color: red;
-  z-index: -1; }
-
-.sideMenu {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  background-color: black;
-  left: 50%;
-  display: none; }
-  .sideMenu .sideMenuEle {
-    margin: auto; }
-
-.pgOne .banner {
-  width: 100%; }
-
-.pgOne .intro {
   width: 100%;
-  display: inline-flex; }
-  .pgOne .intro .intOne {
-    width: 33%; }
-    .pgOne .intro .intOne img {
-      margin: auto; }
-  .pgOne .intro .intTwo {
-    width: 33%; }
-    .pgOne .intro .intTwo img {
-      margin: auto; }
-  .pgOne .intro .intThree {
-    width: 33%; }
-    .pgOne .intro .intThree img {
-      margin: auto; }
-
-.pgOne .cat {
-  width: 100%;
-  display: inline-flex; }
-  .pgOne .cat .catLeft {
-    width: 50%; }
-  .pgOne .cat .catRight {
+  overflow: hidden;
+  background-color: #f16365; }
+  header nav {
+    display: none;
     height: 100%;
-    width: 50%;
-    display: inline-flex; }
-    .pgOne .cat .catRight .catRightUp {
-      width: 100%;
-      height: 50%; }
-      .pgOne .cat .catRight .catRightUp .catRightUpLeft {
-        width: 50%; }
-      .pgOne .cat .catRight .catRightUp .catRightUpRight {
-        width: 50%; }
-    .pgOne .cat .catRight .catRightDown {
-      width: 100%;
-      height: 50%; }
-      .pgOne .cat .catRight .catRightDown .catRightDownLeft {
-        width: 50%; }
-      .pgOne .cat .catRight .catRightDown .catRightDownRight {
-        width: 50%; }
+    width: 0;
+    background-color: #f16365;
+    top: 74px;
+    right: 0;
+    overflow-x: hidden;
+    position: fixed;
+    z-index: 1; }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 30px 30px;
+      text-align: center; }
+  header .logo a {
+    margin: 0 15px;
+    box-sizing: border-box;
+    font-size: 30px;
+    color: white;
+    text-decoration: none; }
+  header .menuBtn {
+    margin: 0 15px; }
+  header .menuDesktop {
+    display: none; }
+    header .menuDesktop a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px; }
 
-.pgTwo {
+@media only screen and (min-width: 780px) {
+  header .menuBtn {
+    display: none; }
+  header .menuDesktop {
+    display: block; } }
+
+.log {
+  display: none;
+  height: 100%;
+  width: 0;
+  background-color: #f16365;
+  top: 74px;
+  left: 0;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 1; }
+  .log input {
+    display: block;
+    width: 70%;
+    height: 50px;
+    border: none;
+    margin: 20px auto; }
+  .log button {
+    width: 70%;
+    height: 50px;
+    display: block;
+    margin: 0 auto; }
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif; }
+
+.pgOne {
   display: none; }
+  .pgOne .banner {
+    width: 100%;
+    height: 200px;
+    background-color: black; }
+    .pgOne .banner img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto;
+      opacity: 0.5; }
+  .pgOne .cat {
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    display: inline-flex;
+    height: 230px; }
+    .pgOne .cat .catLeft {
+      width: 50%;
+      cursor: pointer; }
+      .pgOne .cat .catLeft h1 {
+        position: fixed;
+        margin: auto;
+        text-align: center; }
+      .pgOne .cat .catLeft img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: auto; }
+    .pgOne .cat .catRight {
+      width: 50%; }
+      .pgOne .cat .catRight .catRightUp {
+        width: 100%;
+        height: 50%;
+        display: inline-flex;
+        cursor: pointer; }
+        .pgOne .cat .catRight .catRightUp h1 {
+          position: fixed;
+          margin: auto;
+          text-align: center; }
+        .pgOne .cat .catRight .catRightUp img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          margin: auto; }
+      .pgOne .cat .catRight .catRightDown {
+        width: 100%;
+        height: 50%;
+        display: inline-flex;
+        cursor: pointer; }
+        .pgOne .cat .catRight .catRightDown h1 {
+          position: fixed;
+          margin: auto;
+          text-align: center; }
+        .pgOne .cat .catRight .catRightDown img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          margin: auto; }
+
+.pgTwo .feature {
+  width: 100%;
+  height: 200px;
+  background-color: black; }
+  .pgTwo .feature img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    opacity: 0.5; }
 
 .pgThree {
   display: none; }
+
+.catLeft:hover {
+  opacity: 0.6; }
+
+.catRightUp:hover {
+  opacity: 0.6; }
+
+.catRightDown:hover {
+  opacity: 0.6; }
+
+@media only screen and (min-width: 780px) {
+  .pgTwo .feature {
+    height: 400px; } }

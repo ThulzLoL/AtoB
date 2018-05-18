@@ -1,86 +1,113 @@
+@import 'header';
+@import 'login';
+
 body{
     margin: 0;
+    font-family: 'Rubik', sans-serif;
 }
-.header{
-    width: 100%;
-    height: 74px;
-    background-color: red;
-    z-index: -1;
-    
-}
-.sideMenu{
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    background-color: black;
-    left: 50%;
-    display: none;
-    .sideMenuEle{
-        margin: auto
-    }
-}
+
 .pgOne{
+    display: none;
     .banner{
         width: 100%;
-    }
-    .intro{
-        width: 100%;
-        display: inline-flex;
-        .intOne{
-            width: 33%;
-            img{
-                margin: auto;
-            }
-        }
-        .intTwo{
-            width: 33%;
-            img{
-                margin: auto;
-            }
-        }
-        .intThree{
-            width: 33%;
-            img{
-                margin: auto;
-            }
+        height: 200px;
+        background-color: black;
+        img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin: auto;
+            opacity: 0.5;
         }
     }
     .cat{
+        background-color: black;
+        overflow: hidden;
         width: 100%;
         display: inline-flex;
+        height: 230px;
         .catLeft{
             width: 50%;
+            cursor: pointer;
+            h1{
+                position: fixed;
+                margin: auto;
+                text-align: center;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                display: block;
+                margin: auto;
         }
+    }
         .catRight{
-            height: 100%;
             width: 50%;
-            display: inline-flex;
             .catRightUp{
                 width: 100%;
                 height: 50%;
-                .catRightUpLeft{
-                    width: 50%;
+                display: inline-flex;
+                cursor: pointer;
+                h1{
+                    position: fixed;
+                    margin: auto;
+                    text-align: center;
                 }
-                .catRightUpRight{
-                    width: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    margin: auto;
                 }
             }
             .catRightDown{
                 width: 100%;
                 height: 50%;
-                .catRightDownLeft{
-                    width: 50%;
+                display: inline-flex;
+                cursor: pointer;
+                h1{
+                    position: fixed;
+                    margin: auto;
+                    text-align: center;
                 }
-                .catRightDownRight{
-                    width: 50%;
-                }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        margin: auto;
+                    }
             }
         }
     }
 }
 .pgTwo{
-    display: none;
+    .feature{
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin: auto;
+            opacity: 0.5;
+        }
+    }
 }
 .pgThree{
     display: none;
+}
+.catLeft:hover{
+    opacity: 0.6;
+}
+.catRightUp:hover{
+    opacity: 0.6;
+} 
+.catRightDown:hover{
+    opacity: 0.6;
+}
+@media only screen and (min-width: 780px){
+    .pgTwo .feature{
+        height: 400px;
+    }
 }
