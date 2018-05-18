@@ -162,103 +162,34 @@ body {
   .pgTwo .products {
     padding: 10px;
     height: 400px;
-    display: inline-flex; }
-    .pgTwo .products .prodLeft {
-      width: 50%; }
-      .pgTwo .products .prodLeft .prodLeftUp {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box; }
+    .pgTwo .products .product {
+      width: 50%;
+      height: 50%;
+      display: block;
+      cursor: pointer;
+      padding: 0px 5px 5px 0px;
+      box-sizing: border-box; }
+      .pgTwo .products .product img {
+        width: 100%;
         height: 50%;
-        display: block;
-        cursor: pointer;
-        padding: 0px 5px 5px 0px; }
-        .pgTwo .products .prodLeft .prodLeftUp img {
-          width: 100%;
-          height: 50%;
-          display: block; }
-        .pgTwo .products .prodLeft .prodLeftUp .priceOne {
-          height: 20%;
-          text-align: center;
-          width: 100%;
-          background-color: pink; }
-          .pgTwo .products .prodLeft .prodLeftUp .priceOne h1 {
-            font-size: 15px;
-            margin: 0; }
-        .pgTwo .products .prodLeft .prodLeftUp .cartOne {
-          height: 30%; }
-        .pgTwo .products .prodLeft .prodLeftUp button {
-          background-color: green;
-          height: 100%;
-          width: 100%; }
-      .pgTwo .products .prodLeft .prodLeftDown {
-        height: 50%;
-        display: block;
-        cursor: pointer;
-        padding: 0px 5px 0px 0px; }
-        .pgTwo .products .prodLeft .prodLeftDown img {
-          width: 100%;
-          height: 50%;
-          display: block; }
-        .pgTwo .products .prodLeft .prodLeftDown .priceTwo {
-          height: 20%;
-          text-align: center;
-          width: 100%;
-          background-color: pink; }
-          .pgTwo .products .prodLeft .prodLeftDown .priceTwo h1 {
-            font-size: 15px;
-            margin: 0; }
-        .pgTwo .products .prodLeft .prodLeftDown .cartTwo {
-          height: 30%; }
-        .pgTwo .products .prodLeft .prodLeftDown button {
-          background-color: green;
-          height: 100%;
-          width: 100%; }
-    .pgTwo .products .prodRight {
-      width: 50%; }
-      .pgTwo .products .prodRight .prodRightUp {
-        height: 50%;
-        display: block;
-        cursor: pointer;
-        padding: 0px 0px 5px 5px; }
-        .pgTwo .products .prodRight .prodRightUp img {
-          width: 100%;
-          height: 50%;
-          display: block; }
-        .pgTwo .products .prodRight .prodRightUp .priceThree {
-          height: 20%;
-          text-align: center;
-          width: 100%;
-          background-color: pink; }
-          .pgTwo .products .prodRight .prodRightUp .priceThree h1 {
-            font-size: 15px;
-            margin: 0; }
-        .pgTwo .products .prodRight .prodRightUp .cartThree {
-          height: 30%; }
-        .pgTwo .products .prodRight .prodRightUp button {
-          background-color: green;
-          height: 100%;
-          width: 100%; }
-      .pgTwo .products .prodRight .prodRightDown {
-        height: 50%;
-        display: block;
-        cursor: pointer;
-        padding: 0px 0px 0px 5px; }
-        .pgTwo .products .prodRight .prodRightDown img {
-          width: 100%;
-          height: 50%;
-          display: block; }
-        .pgTwo .products .prodRight .prodRightDown .priceFour {
-          height: 20%;
-          text-align: center;
-          width: 100%;
-          background-color: pink; }
-          .pgTwo .products .prodRight .prodRightDown .priceFour h1 {
-            font-size: 15px;
-            margin: 0; }
-        .pgTwo .products .prodRight .prodRightDown .cartFour {
-          height: 30%; }
-        .pgTwo .products .prodRight .prodRightDown button {
-          background-color: green;
-          height: 100%;
-          width: 100%; }
+        display: block; }
+      .pgTwo .products .product .price {
+        height: 20%;
+        text-align: center;
+        width: 100%;
+        background-color: pink; }
+        .pgTwo .products .product .price h1 {
+          font-size: 15px;
+          margin: 0; }
+      .pgTwo .products .product .cart {
+        height: 30%; }
+      .pgTwo .products .product button {
+        background-color: green;
+        height: 100%;
+        width: 100%; }
 
 .pgThree {
   display: none; }
