@@ -160,49 +160,97 @@ body {
   .pgTwo .filters {
     text-align: center; }
   .pgTwo .products {
-    height: 306px;
-    width: 100%;
+    padding: 10px;
+    height: 286px;
     display: inline-flex; }
     .pgTwo .products .prodLeft {
       width: 50%; }
       .pgTwo .products .prodLeft .prodLeftUp {
-        width: 100%;
         height: 50%;
-        display: inline-flex;
-        cursor: pointer; }
+        display: block;
+        cursor: pointer;
+        padding: 0px 5px 0px 0px; }
         .pgTwo .products .prodLeft .prodLeftUp img {
           width: 100%;
           height: 80%;
           display: block; }
+        .pgTwo .products .prodLeft .prodLeftUp div {
+          text-align: center;
+          width: 100%;
+          display: inline-flex;
+          background-color: pink; }
+          .pgTwo .products .prodLeft .prodLeftUp div h1 {
+            font-size: 15px;
+            margin: 0; }
+        .pgTwo .products .prodLeft .prodLeftUp button {
+          background-color: green;
+          height: 26px;
+          width: 41px; }
       .pgTwo .products .prodLeft .prodLeftDown {
-        width: 100%;
         height: 50%;
-        display: inline-flex;
-        cursor: pointer; }
+        display: block;
+        cursor: pointer;
+        padding: 0px 5px 0px 0px; }
         .pgTwo .products .prodLeft .prodLeftDown img {
           width: 100%;
           height: 80%;
           display: block; }
+        .pgTwo .products .prodLeft .prodLeftDown div {
+          text-align: center;
+          width: 100%;
+          display: inline-flex;
+          background-color: pink; }
+          .pgTwo .products .prodLeft .prodLeftDown div h1 {
+            font-size: 15px;
+            margin: 0; }
+        .pgTwo .products .prodLeft .prodLeftDown button {
+          background-color: green;
+          height: 26px;
+          width: 41px; }
     .pgTwo .products .prodRight {
       width: 50%; }
       .pgTwo .products .prodRight .prodRightUp {
-        width: 100%;
         height: 50%;
-        display: inline-flex;
-        cursor: pointer; }
+        display: block;
+        cursor: pointer;
+        padding: 0px 0px 0px 5px; }
         .pgTwo .products .prodRight .prodRightUp img {
           width: 100%;
           height: 80%;
           display: block; }
+        .pgTwo .products .prodRight .prodRightUp div {
+          text-align: center;
+          width: 100%;
+          display: inline-flex;
+          background-color: pink; }
+          .pgTwo .products .prodRight .prodRightUp div h1 {
+            font-size: 15px;
+            margin: 0; }
+        .pgTwo .products .prodRight .prodRightUp button {
+          background-color: green;
+          height: 26px;
+          width: 41px; }
       .pgTwo .products .prodRight .prodRightDown {
-        width: 100%;
         height: 50%;
-        display: inline-flex;
-        cursor: pointer; }
+        display: block;
+        cursor: pointer;
+        padding: 0px 0px 0px 5px; }
         .pgTwo .products .prodRight .prodRightDown img {
           width: 100%;
           height: 80%;
           display: block; }
+        .pgTwo .products .prodRight .prodRightDown div {
+          text-align: center;
+          width: 100%;
+          display: inline-flex;
+          background-color: pink; }
+          .pgTwo .products .prodRight .prodRightDown div h1 {
+            font-size: 15px;
+            margin: 0; }
+        .pgTwo .products .prodRight .prodRightDown button {
+          background-color: green;
+          height: 26px;
+          width: 41px; }
 
 .pgThree {
   display: none; }
