@@ -5,13 +5,13 @@ header{
     height: 74px;
     width: 100%;
     overflow: hidden;
-    background-color: #233c7b;
+    background-color: #f16365;
 
     nav{
         display: none;
         height: 100%;
         width: 0;
-        background-color: #233c7b;
+        background-color: #f16365;
         top: 74px;
         right: 0;
         overflow-x: hidden;
@@ -26,11 +26,12 @@ header{
         }
     }
 
-    .logo p{
+    .logo a{
         margin: 0 15px;
         box-sizing: border-box;
         font-size: 30px;
         color: white;
+        text-decoration: none;
     }
 
     .menuBtn{
