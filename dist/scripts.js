@@ -19,11 +19,9 @@ function addCart (id){
         
 }
 let produtosSection = document.querySelector(".products");
-
 function filter(categoria){
     let produtos = categorias[categoria];
     produtosSection.innerHTML = null;
-
     for(let produto of produtos){
         produtosSection.innerHTML += `<div class="product">
             <img src="${produto.img}" alt="">
@@ -35,9 +33,6 @@ function filter(categoria){
             </div>
         </div>`
     }
-
-
-
 }
 let loginBtn = document.querySelector('#login');
 

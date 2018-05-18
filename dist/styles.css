@@ -130,7 +130,7 @@ body {
           margin: auto; }
 
 .pgTwo {
-  background-color: black; }
+  background-color: #dedede; }
   .pgTwo .feature {
     width: 100%;
     height: 200px;
@@ -187,9 +187,15 @@ body {
       .pgTwo .products .product .cart {
         height: 30%; }
       .pgTwo .products .product button {
+        color: green;
         background-color: green;
+        background: url(imgs/cart.png);
         height: 100%;
-        width: 100%; }
+        width: 100%;
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; }
 
 .pgThree {
   display: none; }
