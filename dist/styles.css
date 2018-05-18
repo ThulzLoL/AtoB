@@ -65,31 +65,53 @@ body {
       margin: auto; }
 
 .pgOne .cat {
+  background-color: black;
+  overflow: hidden;
   width: 100%;
-  display: inline-flex; }
+  display: inline-flex;
+  height: 230px; }
   .pgOne .cat .catLeft {
-    width: 50%; }
-  .pgOne .cat .catRight {
-    height: 100%;
     width: 50%;
-    display: inline-flex; }
+    cursor: pointer; }
+    .pgOne .cat .catLeft img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto; }
+  .pgOne .cat .catRight {
+    width: 50%; }
     .pgOne .cat .catRight .catRightUp {
       width: 100%;
-      height: 50%; }
-      .pgOne .cat .catRight .catRightUp .catRightUpLeft {
-        width: 50%; }
-      .pgOne .cat .catRight .catRightUp .catRightUpRight {
-        width: 50%; }
+      height: 50%;
+      display: inline-flex;
+      cursor: pointer; }
+      .pgOne .cat .catRight .catRightUp img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: auto; }
     .pgOne .cat .catRight .catRightDown {
       width: 100%;
-      height: 50%; }
-      .pgOne .cat .catRight .catRightDown .catRightDownLeft {
-        width: 50%; }
-      .pgOne .cat .catRight .catRightDown .catRightDownRight {
-        width: 50%; }
+      height: 50%;
+      display: inline-flex;
+      cursor: pointer; }
+      .pgOne .cat .catRight .catRightDown img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: auto; }
 
 .pgTwo {
   display: none; }
 
 .pgThree {
   display: none; }
+
+.catLeft:hover {
+  opacity: 0.6; }
+
+.catRightUp:hover {
+  opacity: 0.6; }
+
+.catRightDown:hover {
+  opacity: 0.6; }
