@@ -139,7 +139,6 @@ body{
                 height: 20%;
                 text-align: center;
                 width: 100%;
-                background-color: pink;
                 h1{
                     font-size: 15px;
                     margin: 0;
@@ -147,13 +146,20 @@ body{
             }
             .cart{
                 height: 30%;
+                display: flex;
+            }
+            .preco{
+                font-size: 25px;
+                text-align: center;
+                width: 50%;
+                margin: auto;
             }
             button{
                 color: green;
                 background-color: green;
                 background: url(imgs/cart.png);
                 height: 100%;
-                width: 100%;
+                width: 50%;
                 display: block;
                 background-size: contain;
                 background-repeat: no-repeat;

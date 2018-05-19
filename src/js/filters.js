@@ -9,6 +9,9 @@ function filter(categoria){
                 ${produto.nome}
             </div>
             <div class="cart">
+            <div class="preco">
+            R$${produto.preco}
+            </div>
                 <button onclick="addCart()"></button>
             </div>
         </div>`

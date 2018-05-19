@@ -179,19 +179,24 @@ body {
       .pgTwo .products .product .price {
         height: 20%;
         text-align: center;
-        width: 100%;
-        background-color: pink; }
+        width: 100%; }
         .pgTwo .products .product .price h1 {
           font-size: 15px;
           margin: 0; }
       .pgTwo .products .product .cart {
-        height: 30%; }
+        height: 30%;
+        display: flex; }
+      .pgTwo .products .product .preco {
+        font-size: 25px;
+        text-align: center;
+        width: 50%;
+        margin: auto; }
       .pgTwo .products .product button {
         color: green;
         background-color: green;
         background: url(imgs/cart.png);
         height: 100%;
-        width: 100%;
+        width: 50%;
         display: block;
         background-size: contain;
         background-repeat: no-repeat;
