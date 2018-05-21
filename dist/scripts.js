@@ -18,34 +18,55 @@ function addCart (id){
     
         
 }
-let imagePage2 = document.querySelector(".imagePage2");
 let pgTwo = document.querySelector(".pgTwo");
 let pgThree = document.querySelector(".pgThree");
+let prodImage = document.querySelector(".prodImg")
+let prodName = document.querySelector(".prodName")
+
 
 function changePage23(){
-    console.log("estou aqui");
-    pgTwo.style = "display = none";
-    pgThree.style.display = "";
+    console.log(this.getAttribute('data-id-produto'));
+    prodImage.src = this.getAttribute('data-img-produto');
+    prodValue.innerHTML = this.getAttribute('data-value-produto');
+    prodName.innerHTML = this.getAttribute('data-nome-produto');
+    pgTwo.style = "display: none";
+    pgThree.style = "display: block";
+
+}
+
+let imagens = [];
+let ids = [];
+
+function createFunc(produto){
+    produtosSection.innerHTML += `<div class="product">
+    <img class="imagePage2" src="${produto.img}" alt="" data-id-produto="${produto.id}" data-img-produto="${produto.img}"
+    data-value-produto="${produto.preco}" data-nome-produto="${produto.nome}">
+    <div class="price">
+    ${produto.nome}
+    </div>
+    <div class="cart">
+    <div class="preco">
+    R$${produto.preco}
+    </div>
+    <button onclick="addCart()"></button>
+    </div>
+    </div>`;
+    imagens = document.querySelectorAll(".imagePage2");
+    
+    for (let imagem of imagens) {
+        imagem.onclick = changePage23;
+    }
 }
 let produtosSection = document.querySelector(".products");
 let imagemFeature = document.querySelector(".imagemFeature");
+
 function filter(categoria){
     let produtos = categorias[categoria];
     produtosSection.innerHTML = null;
     imagemFeature.src = `imgs/${categoria}.jpg`
+    ids = [];
     for(let produto of produtos){
-        produtosSection.innerHTML += `<div class="product">
-            <img src="${produto.img}" alt="">
-            <div class="price">
-                ${produto.nome}
-            </div>
-            <div class="cart">
-            <div class="preco">
-            R$${produto.preco}
-            </div>
-                <button onclick="addCart()"></button>
-            </div>
-        </div>`
+        createFunc(produto);
     }
 }
 
@@ -328,23 +349,14 @@ function lookFor(){
     const regex = new RegExp(`${nome}.*`, 'i');
     produtosSection.innerHTML = "";
     counter = 0;
+    
     for (let categoria of Object.values(categorias)){
         for (let produto of categoria) {
-                if (regex.test(produto.nome) && counter <= 3){
-                    counter++;
-                    produtosSection.innerHTML += `<div class="product">
-            <img  onclick="changePage23()" src="${produto.img}" alt="">
-            <div class="price">
-                ${produto.nome}
-            </div>
-            <div class="cart">
-            <div class="preco">
-            R$${produto.preco}
-            </div>
-                <button onclick="addCart()"></button>
-            </div>
-        </div>`
-                }
+            if (regex.test(produto.nome) && counter <= 3){
+                counter++;
+                createFunc(produto);
+            }
         }
     }
 }
+
