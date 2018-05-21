@@ -3,7 +3,7 @@ let loginBtn = document.querySelector('#login');
 function signIn(){
     let formLogIn = document.querySelector('.log');
     let menu = document.querySelector("nav");
-    if (formLogIn.style.display === "none"){
+    if (formLogIn.style.display !== "block"){
         formLogIn.style.display = "block";
         formLogIn.style.width = "60%";
     }
