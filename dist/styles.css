@@ -150,7 +150,6 @@ body {
   text-align: center; }
 
 .pgTwo {
-  display: none;
   background-color: #dedede; }
   .pgTwo .feature {
     width: 100%;
@@ -172,14 +171,15 @@ body {
       width: 50%;
       height: 50%;
       display: block;
-      cursor: pointer;
       padding: 0px 5px 5px 0px;
       box-sizing: border-box; }
       .pgTwo .products .product img {
+        cursor: pointer;
         width: 100%;
         height: 50%;
         display: block; }
       .pgTwo .products .product .price {
+        cursor: pointer;
         height: 20%;
         text-align: center;
         width: 100%;
@@ -207,32 +207,32 @@ body {
         background-repeat: no-repeat;
         background-position: center; }
 
-.pgThree .addProduct {
-  display: inline-flex; }
-
-.pgThree .cartFive {
-  cursor: pointer;
-  color: green;
-  background-color: green;
-  background: url(imgs/cart.png);
-  height: 50px;
-  width: 50%;
-  display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; }
-
-.pgThree .quant button {
-  cursor: pointer;
-  text-align: center;
-  background: transparent;
-  color: black;
-  border-color: black;
-  border-style: solid;
-  height: 23px;
-  width: 23px;
-  border-radius: 72%;
-  margin: auto; }
+.pgThree {
+  display: none; }
+  .pgThree .addProduct {
+    display: inline-flex; }
+  .pgThree .cartFive {
+    cursor: pointer;
+    color: green;
+    background-color: green;
+    background: url(imgs/cart.png);
+    height: 50px;
+    width: 50%;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .pgThree .quant button {
+    cursor: pointer;
+    text-align: center;
+    background: transparent;
+    color: black;
+    border-color: black;
+    border-style: solid;
+    height: 23px;
+    width: 23px;
+    border-radius: 72%;
+    margin: auto; }
 
 .catLeft:hover {
   opacity: 0.6; }

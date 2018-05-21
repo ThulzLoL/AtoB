@@ -11,7 +11,7 @@ function lookFor(){
                 if (regex.test(produto.nome) && counter <= 3){
                     counter++;
                     produtosSection.innerHTML += `<div class="product">
-            <img src="${produto.img}" alt="">
+            <img  onclick="changePage23()" src="${produto.img}" alt="">
             <div class="price">
                 ${produto.nome}
             </div>
