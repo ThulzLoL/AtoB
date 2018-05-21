@@ -1,0 +1,43 @@
+.pgOne{
+    // display: none;
+    .banner{
+        width: 100%;
+
+        img{
+            width: 100%;
+            display: block;
+            margin: auto;
+        }
+    }
+
+    .cat{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        img{
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 780px){
+    .cat{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .catLeft{
+        width: 50%;
+        overflow: hidden;
+    }
+
+    .catRight{
+        width: 50%;
+        overflow: hidden;
+    }
+}

@@ -15,8 +15,7 @@ header {
     right: 0;
     overflow-x: hidden;
     position: fixed;
-    z-index: 1;
-    transition: 0.5s; }
+    z-index: 1; }
     header nav a {
       color: white;
       text-decoration: none;
@@ -65,70 +64,38 @@ header {
     display: block;
     margin: 0 auto; }
 
+.pgOne .banner {
+  width: 100%; }
+  .pgOne .banner img {
+    width: 100%;
+    display: block;
+    margin: auto; }
+
+.pgOne .cat {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+  .pgOne .cat img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+
+@media only screen and (min-width: 780px) {
+  .cat {
+    display: flex;
+    flex-wrap: nowrap; }
+  .catLeft {
+    width: 50%;
+    overflow: hidden; }
+  .catRight {
+    width: 50%;
+    overflow: hidden; } }
+
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif; }
-
-.pgOne {
-  display: none; }
-  .pgOne .banner {
-    width: 100%;
-    height: 200px;
-    background-color: black; }
-    .pgOne .banner img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      margin: auto;
-      opacity: 0.5; }
-  .pgOne .cat {
-    background-color: black;
-    overflow: hidden;
-    width: 100%;
-    display: inline-flex;
-    height: 230px; }
-    .pgOne .cat .catLeft {
-      width: 50%;
-      cursor: pointer; }
-      .pgOne .cat .catLeft h1 {
-        position: fixed;
-        margin: auto;
-        text-align: center; }
-      .pgOne .cat .catLeft img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        margin: auto; }
-    .pgOne .cat .catRight {
-      width: 50%; }
-      .pgOne .cat .catRight .catRightUp {
-        width: 100%;
-        height: 50%;
-        display: inline-flex;
-        cursor: pointer; }
-        .pgOne .cat .catRight .catRightUp h1 {
-          position: fixed;
-          margin: auto;
-          text-align: center; }
-        .pgOne .cat .catRight .catRightUp img {
-          width: 100%;
-          height: 100%;
-          display: block;
-          margin: auto; }
-      .pgOne .cat .catRight .catRightDown {
-        width: 100%;
-        height: 50%;
-        display: inline-flex;
-        cursor: pointer; }
-        .pgOne .cat .catRight .catRightDown h1 {
-          position: fixed;
-          margin: auto;
-          text-align: center; }
-        .pgOne .cat .catRight .catRightDown img {
-          width: 100%;
-          height: 100%;
-          display: block;
-          margin: auto; }
 
 .search {
   text-align: center;
@@ -235,17 +202,17 @@ body {
     border-radius: 72%;
     margin: auto; }
 
-.catLeft:hover {
-  opacity: 0.6; }
-
-.catRightUp:hover {
-  opacity: 0.6; }
-
-.catRightDown:hover {
-  opacity: 0.6; }
-
 @media only screen and (min-width: 780px) {
   .pgTwo .feature {
     height: 400px; }
   .pgTwo .products {
-    height: 400px; } }
+    height: 400px; }
+  .cat {
+    display: flex;
+    flex-wrap: nowrap; }
+  .catLeft {
+    width: 50%;
+    overflow: hidden; }
+  .catRight {
+    width: 50%;
+    overflow: hidden; } }
