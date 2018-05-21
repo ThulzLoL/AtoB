@@ -7,106 +7,71 @@
     <title>AtoB</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
-
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700" rel="stylesheet">
 </head>
 <body>
     <header>
-
         <div class="logo">
             <a href="">AtoB</a>
         </div>
-            
         <div class="menuBtn">
             <img src="img/toogle.png" alt="">
         </div>
-        
         <nav>
             <a id="login">Login/Cadastro</a>
             <a href="">Categoria</a>
             <a href="">Contato</a>
         </nav>
-
         <div class="menuDesktop">
             <a href="">Login/Cadastro</a>
             <a href="">Categoria</a>
             <a href="">Contato</a>
         </div>
     </header>
-
     <section class="log">
         <input type="text" placeholder="Username">
         <input type="text" placeholder="Password">
         <button>Log in</button>
     </section>
-
     <section class="pgOne">
-        <div class="banner"></div>
-        <div class="intro">
-            <!-- Divs com imagens e explicacao-->
-            <div class="intOne">
-                    <img src="" alt="">
-            </div>
-            <div class="intTwo">
-                    <img src="" alt="">
-            </div>
-            <div class="intThree">
-                    <img src="" alt="">
-            </div>
+        <div class="banner">
+            <img src="imgs/bg-atob3.jpg" alt="">
         </div>
         <div class="cat">
             <div class="catLeft">
+                <h1>comidas</h1>
                 <img src="imgs/bg-atob1.jpg" alt="">
             </div>
             <div class="catRight">
                 <div class="catRightUp">
-                    
-                                <img src="imgs/bg-atob2.jpg" alt="">
+                    <img src="imgs/bg-atob2.jpg" alt="">
                 </div>
                 <div class="catRightDown">
-                                <img src="imgs/bg-atob5.jpg" alt="">
+                    <img src="imgs/bg-atob5.jpg" alt="">
                 </div>
             </div>
         </div>
     </section>
     <section class="pgTwo">
-        <div class="feature"></div>
+        <div class="feature">
+            <img class="imagemFeature" src="imgs/bg-atob4.jpg" alt="">
+        </div>
         <div class="search">
-            <input type="text">
+            <input class="textSearch" type="text" onkeyup="lookFor()">
             <button onclick="lookFor()"></button>
         </div>
         <div class="filters">
-            <button onclick="filter1()"></button>
-            <button onclick="filter2()"></button>
-            <button onclick="filter3()"></button>
+            <button onclick="filter('food')">Comidas</button>
+            <button onclick="filter('banho')">Banho</button>
+            <button onclick="filter('bebidas')">Bebidas</button>
+            <button onclick="filter4()">Mais...</button>
         </div>
         <div class="products">
-            <div class="prodUp">
-                <div class="prodUpLeft">
-                    <img src="" alt="">
-                    <button onclick="addCart()"></button>
-                </div>
-                <div class="prodUpRight">
-                    <img src="" alt="">
-                    <button onclick="addCart()"></button>
-                </div>
-            </div>
-            <div class="prodDown">
-                <div class="prodDownLeft">
-                    <img src="" alt="">
-                    <button onclick="addCart()"></button>
-                </div>
-                <div class="prodDownUp">
-                    <img src="" alt="">
-                    <button onclick="addCart()"></button>
-                </div>
-            </div>
         </div>
     </section>
     <section class="pgThree">
         <div class="prodImg"></div>
     </section>
     <div class="myCart"></div>
-
 </body>
 </html>
