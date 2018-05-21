@@ -76,7 +76,7 @@ let loginBtn = document.querySelector('#login');
 function signIn(){
     let formLogIn = document.querySelector('.log');
     let menu = document.querySelector("nav");
-    if (formLogIn.style.display === "none"){
+    if (formLogIn.style.display !== "block"){
         formLogIn.style.display = "block";
         formLogIn.style.width = "60%";
     }
@@ -93,7 +93,8 @@ let menuBtn = document.querySelector('.menuBtn');
 function menuToogle() {
     let menu = document.querySelector("nav");
     let formLogIn = document.querySelector('.log');
-    if (menu.style.display === "none") {
+   
+    if (menu.style.display !== "flex") {
         menu.style.display = "flex";
         menu.style.flexDirection = "column";
         menu.style.width = "40%";

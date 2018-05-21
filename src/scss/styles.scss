@@ -1,85 +1,12 @@
 @import 'header';
 @import 'login';
+@import 'pgone';
 
 body{
     margin: 0;
     font-family: 'Rubik', sans-serif;
 }
 
-.pgOne{
-    display: none;
-    .banner{
-        width: 100%;
-        height: 200px;
-        background-color: black;
-        img{
-            width: 100%;
-            height: 100%;
-            display: block;
-            margin: auto;
-            opacity: 0.5;
-        }
-    }
-    .cat{
-        background-color: black;
-        overflow: hidden;
-        width: 100%;
-        display: inline-flex;
-        height: 230px;
-        .catLeft{
-            width: 50%;
-            cursor: pointer;
-            h1{
-                position: fixed;
-                margin: auto;
-                text-align: center;
-            }
-            img{
-                width: 100%;
-                height: 100%;
-                display: block;
-                margin: auto;
-            }
-        }
-        .catRight{
-            width: 50%;
-            .catRightUp{
-                width: 100%;
-                height: 50%;
-                display: inline-flex;
-                cursor: pointer;
-                h1{
-                    position: fixed;
-                    margin: auto;
-                    text-align: center;
-                }
-                img{
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                    margin: auto;
-                }
-            }
-            .catRightDown{
-                width: 100%;
-                height: 50%;
-                display: inline-flex;
-                cursor: pointer;
-                h1{
-                    position: fixed;
-                    margin: auto;
-                    text-align: center;
-                }
-                img{
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                    margin: auto;
-                }
-            }
-        }
-    }
-}
 .search{
     text-align: center;
     margin:auto;
@@ -219,20 +146,27 @@ body{
         }
     }
 }
-.catLeft:hover{
-    opacity: 0.6;
-}
-.catRightUp:hover{
-    opacity: 0.6;
-} 
-.catRightDown:hover{
-    opacity: 0.6;
-}
+
 @media only screen and (min-width: 780px){
     .pgTwo .feature{
         height: 400px;
     }
     .pgTwo .products{
         height: 400px;
+    }
+
+    .cat{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .catLeft{
+        width: 50%;
+        overflow: hidden;
+    }
+
+    .catRight{
+        width: 50%;
+        overflow: hidden;
     }
 }
