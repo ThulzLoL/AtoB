@@ -179,7 +179,8 @@ body {
       .pgTwo .products .product .price {
         height: 20%;
         text-align: center;
-        width: 100%; }
+        width: 100%;
+        overflow: auto; }
         .pgTwo .products .product .price h1 {
           font-size: 15px;
           margin: 0; }
