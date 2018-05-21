@@ -18,10 +18,21 @@ function addCart (id){
     
         
 }
+let imagePage2 = document.querySelector(".imagePage2");
+let pgTwo = document.querySelector(".pgTwo");
+let pgThree = document.querySelector(".pgThree");
+
+function changePage23(){
+    console.log("estou aqui");
+    pgTwo.style = "display = none";
+    pgThree.style.display = "";
+}
 let produtosSection = document.querySelector(".products");
+let imagemFeature = document.querySelector(".imagemFeature");
 function filter(categoria){
     let produtos = categorias[categoria];
     produtosSection.innerHTML = null;
+    imagemFeature.src = `imgs/${categoria}.jpg`
     for(let produto of produtos){
         produtosSection.innerHTML += `<div class="product">
             <img src="${produto.img}" alt="">
@@ -29,11 +40,15 @@ function filter(categoria){
                 ${produto.nome}
             </div>
             <div class="cart">
+            <div class="preco">
+            R$${produto.preco}
+            </div>
                 <button onclick="addCart()"></button>
             </div>
         </div>`
     }
 }
+
 let loginBtn = document.querySelector('#login');
 
 function signIn(){
@@ -73,156 +88,263 @@ menuBtn.onclick = menuToogle;
 let categorias = {
     food: [
         {
-            nome:"Lasanha congelada Sadia",
+            nome:"Lasanha Bolonhesa - Sadia",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
             id: 1
         },
         {
-            nome:"",
+            nome:"Nuggets com queijo - Sadia",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 2
         },
         {
-            nome:"lasanha",
+            nome:"Pratos Congelados - Sadia",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg"
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 3
         },
         {
-            nome:"lasanha",
+            nome:"Pratos Congelados - Marca Fitness",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 4
         },
     ],
     
     bebidas: [
         {
-            nome:"lasanha",
+            nome:"Água mineral Garrafa - 600ml - Pack com 6",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 5
         },
         {
-            nome:"lasanha",
+            nome:"Água mineral Copo - 180ml - Pack com 6",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 6
         },
         {
-            nome:"lasanha",
+            nome:"Coca-cola latas - Pack com 6",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 7
         },
         {
-            nome:"lasanha",
+            nnome:"Sucos Del Valle - Cx - 1l - Pack com 6",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 8
         },
     ],
 
     alcoolicos: [
         {
-            nome:"lasanha",
+            nome:"Vinho Chileno - 750ml - Cx com 6",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 9
         },
         {
-            nome:"lasanha",
+            nome:"Champagne - Cx com 6",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 10
         },
         {
-            nome:"lasanha",
+            nome:"Smirnoff Ice - Pack com 6",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 11
         },
         {
-            nome:"lasanha",
+            nome:"Cerveja Bohemia - Pack com 6",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 12
         },
     ],
 
     guloseimas: [
         {
-            nome:"lasanha",
+            nome:"Trufas Cacau show",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 13
         },
         {
-            nome:"lasanha",
+            nome:"Caixa de bombom - Nestlé",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 14
         },
         {
-            nome:"lasanha",
+            nome:"Ruffles média",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 15
         },
         {
-            nome:"lasanha",
+            nome:"Amendoim descascado",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 16
         },
     ],
 
     cafe: [
         {
-            nome:"lasanha",
+            nome:"Capsulas café - Ristreto - Nespresso - Cx com 16",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 17
         },
         {
-            nome:"lasanha",
+            nome:"Capsulas café - Ristreto - Nespresso",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 18
         },
         {
-            nome:"lasanha",
+            nome:"Capsulas café - Ristreto - Nespresso - Cx com 16",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 19
         },
         {
-            nome:"lasanha",
+            nome:"Capsulas café - Ristreto - Nespresso",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 20
         },
     ],
 
     banho: [
         {
-            nome:"lasanha",
+            nome:"Secador de cabelos - Taiff",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 21
         },
         {
-            nome:"lasanha",
+            nome:"Conj. Toalhas - Buddemeyer",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 22
         },
         {
-            nome:"lasanha",
+            nome:"Kit L'Occitane",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 23
         },
         {
-            nome:"lasanha",
+            nome:"Kit L'Óreal Paris",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 24
         },
     ],
 
     banheiro: [
         {
-            nome:"lasanha",
+            nome:"Papel higiênico - Pack 24",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 25
         },
         {
-            nome:"lasanha",
+            nome:"Sabonete líquido",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 26
         },
         {
-            nome:"lasanha",
+            nome:"Sabonete - Lux",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 27
         },
         {
-            nome:"lasanha",
+            nome:"Bom Ar - Spray",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 28
         },
     ],
 
     quarto: [
         {
-            nome:"lasanha",
+            nome:"Jogo de Cama - Padrão",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 29
         },
         {
-            nome:"lasanha",
+            nome:"Jogo de Cama - Hercovitch",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 30
         },
         {
-            nome:"lasanha",
+            nome:"Travesseiros",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 31
         },
         {
-            nome:"lasanha",
+            nome:"Edredom",
             preco: 15,
+            img: "imgs/lasanha_a_bolonhesa.jpg",
+            id: 32
         },
     ],
 
+}
+let valueQuant = document.querySelector(".valueQuant");
+let prodValue = document.querySelector(".prodValue");
+
+let prodPrice = 3
+let quantity = 1;
+
+function add(){
+    quantity++;
+    valueQuant.innerHTML = quantity;
+    prodValue.innerHTML = `R$ ${prodPrice * quantity}`;
+}
+function subtract(){
+    quantity--;
+    valueQuant.innerHTML = quantity;
+    prodValue.innerHTML = `R$ ${prodPrice * quantity}`;
+}
+
+const textSearch = document.querySelector(".textSearch");
+let counter = 0;
+
+function lookFor(){
+    const nome = textSearch.value;
+    const regex = new RegExp(`${nome}.*`, 'i');
+    produtosSection.innerHTML = "";
+    counter = 0;
+    for (let categoria of Object.values(categorias)){
+        for (let produto of categoria) {
+                if (regex.test(produto.nome) && counter <= 3){
+                    counter++;
+                    produtosSection.innerHTML += `<div class="product">
+            <img  onclick="changePage23()" src="${produto.img}" alt="">
+            <div class="price">
+                ${produto.nome}
+            </div>
+            <div class="cart">
+            <div class="preco">
+            R$${produto.preco}
+            </div>
+                <button onclick="addCart()"></button>
+            </div>
+        </div>`
+                }
+        }
+    }
 }

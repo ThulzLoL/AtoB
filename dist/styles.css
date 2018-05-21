@@ -129,6 +129,26 @@ body {
           display: block;
           margin: auto; }
 
+.search {
+  text-align: center;
+  margin: auto; }
+  .search input {
+    margin: 0;
+    border-radius: 20px 0px 0px 20px;
+    height: 25px;
+    width: 300px;
+    padding-top: 10px; }
+  .search button {
+    border-radius: 0px 20px 20px 0px;
+    width: 50px;
+    height: 41px;
+    margin: 0;
+    padding-bottom: 10px;
+    margin-left: -4px; }
+
+.filters {
+  text-align: center; }
+
 .pgTwo {
   background-color: #dedede; }
   .pgTwo .feature {
@@ -141,24 +161,6 @@ body {
       display: block;
       margin: auto;
       opacity: 0.5; }
-  .pgTwo .search {
-    text-align: center;
-    margin: auto; }
-    .pgTwo .search input {
-      margin: 0;
-      border-radius: 20px 0px 0px 20px;
-      height: 25px;
-      width: 300px;
-      padding-top: 10px; }
-    .pgTwo .search button {
-      border-radius: 0px 20px 20px 0px;
-      width: 50px;
-      height: 41px;
-      margin: 0;
-      padding-bottom: 10px;
-      margin-left: -4px; }
-  .pgTwo .filters {
-    text-align: center; }
   .pgTwo .products {
     padding: 10px;
     height: 400px;
@@ -169,29 +171,37 @@ body {
       width: 50%;
       height: 50%;
       display: block;
-      cursor: pointer;
       padding: 0px 5px 5px 0px;
       box-sizing: border-box; }
       .pgTwo .products .product img {
+        cursor: pointer;
         width: 100%;
         height: 50%;
         display: block; }
       .pgTwo .products .product .price {
+        cursor: pointer;
         height: 20%;
         text-align: center;
         width: 100%;
-        background-color: pink; }
+        overflow: auto; }
         .pgTwo .products .product .price h1 {
           font-size: 15px;
           margin: 0; }
       .pgTwo .products .product .cart {
-        height: 30%; }
+        height: 30%;
+        display: flex; }
+      .pgTwo .products .product .preco {
+        font-size: 25px;
+        text-align: center;
+        width: 50%;
+        margin: auto; }
       .pgTwo .products .product button {
+        cursor: pointer;
         color: green;
         background-color: green;
         background: url(imgs/cart.png);
         height: 100%;
-        width: 100%;
+        width: 50%;
         display: block;
         background-size: contain;
         background-repeat: no-repeat;
@@ -199,6 +209,30 @@ body {
 
 .pgThree {
   display: none; }
+  .pgThree .addProduct {
+    display: inline-flex; }
+  .pgThree .cartFive {
+    cursor: pointer;
+    color: green;
+    background-color: green;
+    background: url(imgs/cart.png);
+    height: 50px;
+    width: 50%;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .pgThree .quant button {
+    cursor: pointer;
+    text-align: center;
+    background: transparent;
+    color: black;
+    border-color: black;
+    border-style: solid;
+    height: 23px;
+    width: 23px;
+    border-radius: 72%;
+    margin: auto; }
 
 .catLeft:hover {
   opacity: 0.6; }
