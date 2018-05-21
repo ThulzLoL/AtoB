@@ -18,6 +18,15 @@ function addCart (id){
     
         
 }
+let imagePage2 = document.querySelector(".imagePage2");
+let pgTwo = document.querySelector(".pgTwo");
+let pgThree = document.querySelector(".pgThree");
+
+function changePage23(){
+    console.log("estou aqui");
+    pgTwo.style = "display = none";
+    pgThree.style.display = "";
+}
 let produtosSection = document.querySelector(".products");
 let imagemFeature = document.querySelector(".imagemFeature");
 function filter(categoria){
@@ -295,6 +304,23 @@ let categorias = {
     ],
 
 }
+let valueQuant = document.querySelector(".valueQuant");
+let prodValue = document.querySelector(".prodValue");
+
+let prodPrice = 3
+let quantity = 1;
+
+function add(){
+    quantity++;
+    valueQuant.innerHTML = quantity;
+    prodValue.innerHTML = `R$ ${prodPrice * quantity}`;
+}
+function subtract(){
+    quantity--;
+    valueQuant.innerHTML = quantity;
+    prodValue.innerHTML = `R$ ${prodPrice * quantity}`;
+}
+
 const textSearch = document.querySelector(".textSearch");
 let counter = 0;
 
@@ -308,7 +334,7 @@ function lookFor(){
                 if (regex.test(produto.nome) && counter <= 3){
                     counter++;
                     produtosSection.innerHTML += `<div class="product">
-            <img src="${produto.img}" alt="">
+            <img  onclick="changePage23()" src="${produto.img}" alt="">
             <div class="price">
                 ${produto.nome}
             </div>
