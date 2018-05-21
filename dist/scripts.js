@@ -294,6 +294,23 @@ let categorias = {
     ],
 
 }
+let valueQuant = document.querySelector(".valueQuant");
+let prodValue = document.querySelector(".prodValue");
+
+let prodPrice = 3
+let quantity = 1;
+
+function add(){
+    quantity++;
+    valueQuant.innerHTML = quantity;
+    prodValue.innerHTML = `R$ ${prodPrice * quantity}`;
+}
+function subtract(){
+    quantity--;
+    valueQuant.innerHTML = quantity;
+    prodValue.innerHTML = `R$ ${prodPrice * quantity}`;
+}
+
 const textSearch = document.querySelector(".textSearch");
 let counter = 0;
 

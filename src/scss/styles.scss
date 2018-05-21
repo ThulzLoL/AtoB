@@ -80,7 +80,30 @@ body{
         }
     }
 }
+.search{
+    text-align: center;
+    margin:auto;
+    input{
+        margin: 0;
+        border-radius: 20px 0px 0px 20px;
+        height: 25px;
+        width: 300px;
+        padding-top: 10px;
+    }
+    button{
+        border-radius: 0px 20px 20px 0px;
+        width: 50px;
+        height: 41px;
+        margin: 0;
+        padding-bottom: 10px;
+        margin-left: -4px;
+    }
+}
+.filters{
+    text-align: center;
+}
 .pgTwo{
+    display: none;
     background-color:#dedede;
     .feature{
         width: 100%;
@@ -93,28 +116,6 @@ body{
             margin: auto;
             opacity: 0.5;
         }
-    }
-    .search{
-        text-align: center;
-        margin:auto;
-        input{
-            margin: 0;
-            border-radius: 20px 0px 0px 20px;
-            height: 25px;
-            width: 300px;
-            padding-top: 10px;
-        }
-        button{
-            border-radius: 0px 20px 20px 0px;
-            width: 50px;
-            height: 41px;
-            margin: 0;
-            padding-bottom: 10px;
-            margin-left: -4px;
-        }
-    }
-    .filters{
-        text-align: center;
     }
     .products{
         padding: 10px;
@@ -156,6 +157,7 @@ body{
                 margin: auto;
             }
             button{
+                cursor: pointer;
                 color: green;
                 background-color: green;
                 background: url(imgs/cart.png);
@@ -171,7 +173,35 @@ body{
     }
 }
 .pgThree{
-    display: none;
+    .addProduct{
+        display: inline-flex;
+    }
+    .cartFive{
+            cursor: pointer;
+            color: green;
+            background-color: green;
+            background: url(imgs/cart.png);
+            height: 50px;
+            width: 50%;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+    }
+    .quant{
+        button{
+            cursor: pointer;
+            text-align: center;
+            background: transparent;
+            color: black;
+            border-color: black;
+            border-style: solid;
+            height: 23px;
+            width: 23px;
+            border-radius: 72%;
+            margin: auto;
+        }
+    }
 }
 .catLeft:hover{
     opacity: 0.6;
