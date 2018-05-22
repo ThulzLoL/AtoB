@@ -64,14 +64,14 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="cat">
-                <div class="catLeft">
-                    <img onclick="changePage12(); filter('banho');" src="imgs/categoria-special.jpg" alt="">
-                </div>
-                <div class="catLeft">
-                        <img onclick="changePage12(); filter('quarto');" src="imgs/categoria-quarto.jpg" alt="">
-                </div>
+            <div class="catLeft">
+                <img onclick="changePage12(); filter('banho');" src="imgs/categoria-special.jpg" alt="">
+            </div>
+            <div class="catLeft">
+                <img onclick="changePage12(); filter('quarto');" src="imgs/categoria-quarto.jpg" alt="">
+            </div>
         </div>
     </section>
     <section class="pgTwo">
@@ -113,30 +113,39 @@
         <div class="prodValue">R$ 3.00</div>
         <div class="addProduct">
             <span>Adicionar ao Carrinho</span>
-            <button class="cartFive"></button>
+            <button class="cartFive" onclick="addCart()"></button>
         </div>
     </section>
     <div class="myCart">
         <div class="cartHeader">
-        <div class="numItens">Itens:</div>
-        <div class="valorTotal">R$: 0,00</div>
-    </div>
-    <div class="cartUni">
-        <div class="cartPar">
-            <div class="cartQuantTag">Quantidade</div>
-            <div class="cartNameTag">Nome</div>
-            <div class="cartPriceTag">Preco</div>
+            <div class="numItens">Itens:</div>
+            <div class="valorTotal">R$: 0,00</div>
         </div>
-        <div class="cartProd">
-        <div class="quant2">
-                <button class="subtract2" onclick="subtract2()">-</button>
-                <span class="valueQuant2">1</span>
-                <button class="add2" onclick="add2()">+</button>
+        <div class="cartUni">
+            <div class="cartPar">
+                <div class="cartQuantTag">Quantidade</div>
+                <div class="cartNameTag">Nome</div>
+                <div class="cartPriceTag">Preco</div>
             </div>
-            <div class="cartName">1</div>
-            <div class="cartPrice">3</div>
+            <div class="cartProd">
+                <div class="quant2">
+                    <button class="subtract2" onclick="subtract2()">-</button>
+                    <span class="valueQuant2">1</span>
+                    <button class="add2" onclick="add2()">+</button>
+                </div>
+                <div class="cartName">1</div>
+                <div class="cartPrice">3</div>
+            </div>
+            <div class="cartProd">
+                <div class="quant2">
+                    <button class="subtract2" onclick="subtract2()">-</button>
+                    <span class="valueQuant2">1</span>
+                    <button class="add2" onclick="add2()">+</button>
+                </div>
+                <div class="cartName">1</div>
+                <div class="cartPrice">3</div>
+            </div>
         </div>
-    </div>
     </div>
     <footer>
         <div class="footerlinks">
