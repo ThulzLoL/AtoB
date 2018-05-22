@@ -47,6 +47,21 @@ function somarPrecos () {
 }
 
 
+let cartUp = document.querySelector('.myCart');
+let cartHeader = document.querySelector('.cartHeader')
+function cartShow(){
+    if (!cartUp.classList.contains('displayed3')){
+        cartUp.classList.add('displayed3');
+    }
+    else{
+        if(cartUp.classList.contains('displayed3')) {
+            cartUp.classList.remove('displayed3');        
+        }
+    }
+
+} 
+
+cartHeader.onclick = cartShow;
 let pgOne = document.querySelector(".pgOne");
 
 function changePage12(){
@@ -89,7 +104,7 @@ function createFunc(produto){
     <div class="preco">
     R$${produto.preco}
     </div>
-    <button onclick="addCart()"></button>
+    <button onclick="addCart(${produto.id})"></button>
     </div>
     </div>`;
     imagens = document.querySelectorAll(".imagePage2");
@@ -386,6 +401,23 @@ function subtract(){
     quantity--;
     valueQuant.innerHTML = quantity;
     prodValue.innerHTML = `R$: ${prodPrice * quantity}`;
+}
+
+let valueQuant2 = document.querySelector(".valueQuant2");
+let cartPrice = document.querySelector(".cartPrice");
+
+let prodPrice2;
+let quantity2 = 1;
+
+function add2(){
+    quantity2++;
+    valueQuant2.innerHTML = quantity2;
+    cartPrice.innerHTML = `R$: ${cartPrice * quantity2}`;
+}
+function subtract2(){
+    quantity2--;
+    valueQuant2.innerHTML = quantity2;
+    cartPrice.innerHTML = `R$: ${cartPrice * quantity2}`;
 }
 
 const textSearch = document.querySelector(".textSearch");

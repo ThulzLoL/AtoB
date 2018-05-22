@@ -12,7 +12,7 @@ function createFunc(produto){
     <div class="preco">
     R$${produto.preco}
     </div>
-    <button onclick="addCart()"></button>
+    <button onclick="addCart(${produto.id})"></button>
     </div>
     </div>`;
     imagens = document.querySelectorAll(".imagePage2");

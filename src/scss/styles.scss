@@ -175,6 +175,90 @@ body{
         margin: 10px 0;
     }
 }
+.myCart{
+    color: black;
+    position: fixed;
+    height: 80%;
+    bottom: 0;
+    width: 100%;
+    background-color: pink;
+    transform: translateY(89.5%);
+    transition: 1s;
+    .cartHeader{
+        border: solid black 1px;
+        height: 10%;
+        display: flex;
+        align-content: space-between;
+        .numItens{
+            margin: auto;
+        }
+        .valorTotal{
+            margin: auto;
+        }
+    }
+    .cartPar{
+        width: 100%;
+        display: flex;
+        .cartQuantTag{
+            border: solid black 1px;
+            text-align: center;
+    width: 25%;
+
+        }
+        .cartNameTag{
+            border: solid black 1px;
+            text-align: center;
+    width: 50%;
+
+        }
+        .cartPriceTag{
+            border: solid black 1px;
+            text-align: center;
+            width: 25%;
+        }
+    }
+    .cartProd{
+        display:flex;
+    }
+    .quant2{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: solid black 1px;
+        width: 25%;
+            margin: auto;
+            text-align: center;
+    
+            button{
+                cursor: pointer;
+                text-align: center;
+                background: transparent;
+                color: black;
+                border-color: black;
+                border-style: solid;
+                height: 23px;
+                width: 23px;
+                border-radius: 72%;
+                margin: auto;
+            }
+        }
+        .cartName{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: solid black 1px;
+            text-align: center;
+            width: 50%;
+        }
+        .cartPrice{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: solid black 1px;
+            text-align: center;
+            width: 25%;
+        }
+}
+.displayed3{
+    transform: translateY(0%);
+}
 
 @media only screen and (min-width: 780px){
     .cat{

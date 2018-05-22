@@ -273,6 +273,75 @@ body {
     text-align: center;
     margin: 10px 0; }
 
+.myCart {
+  color: black;
+  position: fixed;
+  height: 80%;
+  bottom: 0;
+  width: 100%;
+  background-color: pink;
+  transform: translateY(89.5%);
+  transition: 1s; }
+  .myCart .cartHeader {
+    border: solid black 1px;
+    height: 10%;
+    display: flex;
+    align-content: space-between; }
+    .myCart .cartHeader .numItens {
+      margin: auto; }
+    .myCart .cartHeader .valorTotal {
+      margin: auto; }
+  .myCart .cartPar {
+    width: 100%;
+    display: flex; }
+    .myCart .cartPar .cartQuantTag {
+      border: solid black 1px;
+      text-align: center;
+      width: 25%; }
+    .myCart .cartPar .cartNameTag {
+      border: solid black 1px;
+      text-align: center;
+      width: 50%; }
+    .myCart .cartPar .cartPriceTag {
+      border: solid black 1px;
+      text-align: center;
+      width: 25%; }
+  .myCart .cartProd {
+    display: flex; }
+  .myCart .quant2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid black 1px;
+    width: 25%;
+    margin: auto;
+    text-align: center; }
+    .myCart .quant2 button {
+      cursor: pointer;
+      text-align: center;
+      background: transparent;
+      color: black;
+      border-color: black;
+      border-style: solid;
+      height: 23px;
+      width: 23px;
+      border-radius: 72%;
+      margin: auto; }
+  .myCart .cartName {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid black 1px;
+    text-align: center;
+    width: 50%; }
+  .myCart .cartPrice {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid black 1px;
+    text-align: center;
+    width: 25%; }
+
+.displayed3 {
+  transform: translateY(0%); }
+
 @media only screen and (min-width: 780px) {
   .cat {
     display: flex;
