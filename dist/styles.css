@@ -105,6 +105,30 @@ header {
     width: 50%;
     overflow: hidden; } }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #f16365;
+  height: 150px;
+  color: white; }
+  footer .footerlinks {
+    display: flex;
+    flex-direction: column; }
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 30px; }
+  footer .socialfooter {
+    display: flex;
+    flex-direction: column;
+    text-align: right; }
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 30px; }
+
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif; }
@@ -130,6 +154,15 @@ body {
 
 .filters {
   text-align: center; }
+  .filters button {
+    border: 0;
+    box-shadow: 0;
+    background-color: #233c7b;
+    height: 40px;
+    margin: 15px 15px;
+    color: white; }
+  .filters button:hover {
+    background-color: #f16365; }
 
 .pgTwo {
   background-color: #dedede; }
