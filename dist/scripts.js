@@ -18,6 +18,18 @@ function addCart (id){
     
         
 }
+let pgOne = document.querySelector(".pgOne");
+
+function changePage12(){
+    pgOne.style = "display: none";
+    pgTwo.style = "display: block";
+    pgThree.style = "display: none";
+}
+function changePage1(){
+    pgOne.style = "display: block";
+    pgTwo.style = "display: none";
+    pgThree.style = "display: none";
+}
 let pgTwo = document.querySelector(".pgTwo");
 let pgThree = document.querySelector(".pgThree");
 let prodImage = document.querySelector(".prodImg")
@@ -29,6 +41,7 @@ function changePage23(){
     prodImage.src = this.getAttribute('data-img-produto');
     prodValue.innerHTML = this.getAttribute('data-value-produto');
     prodName.innerHTML = this.getAttribute('data-nome-produto');
+    prodPrice = prodValue.innerHTML;
     pgTwo.style = "display: none";
     pgThree.style = "display: block";
 
@@ -92,15 +105,15 @@ let menuBtn = document.querySelector('.menuBtn');
 function menuToogle() {
     let menu = document.querySelector("nav");
     let formLogIn = document.querySelector('.log');
-   
-    if (menu.style.display !== "flex") {
-        menu.style.display = "flex";
-        menu.style.flexDirection = "column";
-        menu.style.width = "40%";
+    
+    if (!menu.classList.contains('displayed')){
+        menu.classList.add('displayed');
     }
     else {
-        menu.style.display = "none";
-        menu.style.width = "0px;";
+        if(menu.classList.contains('displayed')) {
+            menu.classList.remove('displayed');        
+        }
+        
         formLogIn.style.diplay = "none";
         formLogIn.style.width = "0";
     }
@@ -328,7 +341,7 @@ let categorias = {
 let valueQuant = document.querySelector(".valueQuant");
 let prodValue = document.querySelector(".prodValue");
 
-let prodPrice = 3
+let prodPrice;
 let quantity = 1;
 
 function add(){

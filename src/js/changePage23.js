@@ -9,6 +9,7 @@ function changePage23(){
     prodImage.src = this.getAttribute('data-img-produto');
     prodValue.innerHTML = this.getAttribute('data-value-produto');
     prodName.innerHTML = this.getAttribute('data-nome-produto');
+    prodPrice = prodValue.innerHTML;
     pgTwo.style = "display: none";
     pgThree.style = "display: block";
 

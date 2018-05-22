@@ -7,15 +7,18 @@ header {
   overflow: hidden;
   background-color: #f16365; }
   header nav {
-    display: none;
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    width: 0;
+    width: 40%;
     background-color: #f16365;
     top: 74px;
     right: 0;
     overflow-x: hidden;
     position: fixed;
-    z-index: 1; }
+    z-index: 1;
+    transform: translateX(100%);
+    transition: 1s; }
     header nav a {
       color: white;
       text-decoration: none;
@@ -35,6 +38,9 @@ header {
       color: white;
       text-decoration: none;
       margin: 0 15px; }
+
+.displayed {
+  transform: translateX(0); }
 
 @media only screen and (min-width: 780px) {
   header .menuBtn {
@@ -64,23 +70,24 @@ header {
     display: block;
     margin: 0 auto; }
 
-.pgOne .banner {
-  width: 100%; }
-  .pgOne .banner img {
+.pgOne {
+  display: none; }
+  .pgOne .banner {
+    width: 100%; }
+    .pgOne .banner img {
+      width: 100%;
+      display: block;
+      margin: auto; }
+  .pgOne .cat {
     width: 100%;
-    display: block;
-    margin: auto; }
-
-.pgOne .cat {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap; }
-  .pgOne .cat img {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 0; }
+    display: flex;
+    flex-wrap: wrap; }
+    .pgOne .cat img {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      margin: 0;
+      padding: 0; }
 
 @media only screen and (min-width: 780px) {
   .cat {

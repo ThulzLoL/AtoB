@@ -1,7 +1,7 @@
 let valueQuant = document.querySelector(".valueQuant");
 let prodValue = document.querySelector(".prodValue");
 
-let prodPrice = 3
+let prodPrice;
 let quantity = 1;
 
 function add(){
