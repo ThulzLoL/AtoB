@@ -274,16 +274,16 @@ body {
     margin: 10px 0; }
 
 .myCart {
-  color: black;
+  color: white;
   position: fixed;
   height: 80%;
   bottom: 0;
   width: 100%;
-  background-color: pink;
+  background-color: #233c7b;
   transform: translateY(89.5%);
   transition: 1s; }
   .myCart .cartHeader {
-    border: solid black 1px;
+    border: solid white 1px;
     height: 10%;
     display: flex;
     align-content: space-between; }
@@ -295,15 +295,15 @@ body {
     width: 100%;
     display: flex; }
     .myCart .cartPar .cartQuantTag {
-      border: solid black 1px;
+      border: solid white 1px;
       text-align: center;
       width: 25%; }
     .myCart .cartPar .cartNameTag {
-      border: solid black 1px;
+      border: solid white 1px;
       text-align: center;
       width: 50%; }
     .myCart .cartPar .cartPriceTag {
-      border: solid black 1px;
+      border: solid white 1px;
       text-align: center;
       width: 25%; }
   .myCart .cartProd {
@@ -311,7 +311,7 @@ body {
   .myCart .quant2 {
     padding-top: 5px;
     padding-bottom: 5px;
-    border: solid black 1px;
+    border: solid white 1px;
     width: 25%;
     margin: auto;
     text-align: center; }
@@ -319,8 +319,8 @@ body {
       cursor: pointer;
       text-align: center;
       background: transparent;
-      color: black;
-      border-color: black;
+      color: white;
+      border-color: white;
       border-style: solid;
       height: 23px;
       width: 23px;
@@ -329,13 +329,13 @@ body {
   .myCart .cartName {
     padding-top: 5px;
     padding-bottom: 5px;
-    border: solid black 1px;
+    border: solid white 1px;
     text-align: center;
     width: 50%; }
   .myCart .cartPrice {
     padding-top: 5px;
     padding-bottom: 5px;
-    border: solid black 1px;
+    border: solid white 1px;
     text-align: center;
     width: 25%; }
 
