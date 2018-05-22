@@ -12,8 +12,7 @@ function menuToogle() {
             menu.classList.remove('displayed');        
         }
         
-        formLogIn.style.diplay = "none";
-        formLogIn.style.width = "0";
+        formLogIn.classList.remove('displayed2')
     }
 }
 

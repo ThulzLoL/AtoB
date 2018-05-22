@@ -88,16 +88,16 @@ let loginBtn = document.querySelector('#login');
 function signIn(){
     let formLogIn = document.querySelector('.log');
     let menu = document.querySelector("nav");
-    if (formLogIn.style.display !== "block"){
-        formLogIn.style.display = "block";
-        formLogIn.style.width = "60%";
+    if (!formLogIn.classList.contains('displayed2')){
+        formLogIn.classList.add('displayed2');
     }
     else{
-        formLogIn.style.display = "none";
-        formLogIn.style.width = "0";
+        if(formLogIn.classList.contains('displayed2')) {
+            formLogIn.classList.remove('displayed2');        
+        }
     }
 
-}
+} 
 
 loginBtn.onclick = signIn;
 let menuBtn = document.querySelector('.menuBtn');
@@ -114,8 +114,7 @@ function menuToogle() {
             menu.classList.remove('displayed');        
         }
         
-        formLogIn.style.diplay = "none";
-        formLogIn.style.width = "0";
+        formLogIn.classList.remove('displayed2')
     }
 }
 
@@ -123,15 +122,15 @@ menuBtn.onclick = menuToogle;
 let categorias = {
     food: [
         {
-            nome:"Lasanha Bolonhesa - Sadia",
+            nome:"Lasanhas Sabores - Sadia",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/lasanha-sadia.jpg",
             id: 1
         },
         {
             nome:"Nuggets com queijo - Sadia",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/nuggets-queijo-sadia.jpg",
             id: 2
         },
         {
@@ -143,7 +142,7 @@ let categorias = {
         {
             nome:"Pratos Congelados - Marca Fitness",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/congelados-sadia.jpg",
             id: 4
         },
     ],
@@ -152,25 +151,25 @@ let categorias = {
         {
             nome:"Água mineral Garrafa - 600ml - Pack com 6",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/agua-mineral-garrafa-pack6.jpg",
             id: 5
         },
         {
-            nome:"Água mineral Copo - 180ml - Pack com 6",
+            nome:"Água mineral Copo - 180ml - Pack com 3",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/agua-mineral-copo-pack6.jpg",
             id: 6
         },
         {
             nome:"Coca-cola latas - Pack com 6",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/coca-cola-lata-pack6.jpg",
             id: 7
         },
         {
-            nnome:"Sucos Del Valle - Cx - 1l - Pack com 6",
+            nnome:"Sucos Del Valle - Cx - 1l - Pack com 5",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/suco-del-valle-pack5.jpg",
             id: 8
         },
     ],
@@ -179,25 +178,25 @@ let categorias = {
         {
             nome:"Vinho Chileno - 750ml - Cx com 6",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/vinho-chileno.jpg",
             id: 9
         },
         {
             nome:"Champagne - Cx com 6",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/champagne.jpg",
             id: 10
         },
         {
             nome:"Smirnoff Ice - Pack com 6",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/smirnoff-ice-pack6.jpg",
             id: 11
         },
         {
             nome:"Cerveja Bohemia - Pack com 6",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/cerveja-bohemia-pack6.jpg",
             id: 12
         },
     ],
@@ -206,25 +205,25 @@ let categorias = {
         {
             nome:"Trufas Cacau show",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/trufas-cacau-show.jpg",
             id: 13
         },
         {
             nome:"Caixa de bombom - Nestlé",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/caixa-bombom-nestle.jpg",
             id: 14
         },
         {
             nome:"Ruffles média",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/rufles-media.jpg",
             id: 15
         },
         {
             nome:"Amendoim descascado",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/amendoim-descascado-yoki.jpg",
             id: 16
         },
     ],
@@ -233,25 +232,25 @@ let categorias = {
         {
             nome:"Capsulas café - Ristreto - Nespresso - Cx com 16",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/capsulas-nespresso.jpg",
             id: 17
         },
         {
             nome:"Capsulas café - Ristreto - Nespresso",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/capsulas-nespresso.jpg",
             id: 18
         },
         {
             nome:"Capsulas café - Ristreto - Nespresso - Cx com 16",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/capsulas-nespresso.jpg",
             id: 19
         },
         {
             nome:"Capsulas café - Ristreto - Nespresso",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/capsulas-nespresso.jpg",
             id: 20
         },
     ],
@@ -260,25 +259,25 @@ let categorias = {
         {
             nome:"Secador de cabelos - Taiff",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/secador-taiff.jpg",
             id: 21
         },
         {
             nome:"Conj. Toalhas - Buddemeyer",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/toalhas-buddemeyer.jpg",
             id: 22
         },
         {
             nome:"Kit L'Occitane",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/kit-loccitane.jpg",
             id: 23
         },
         {
             nome:"Kit L'Óreal Paris",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/kit-loreal.jpg",
             id: 24
         },
     ],
@@ -287,25 +286,25 @@ let categorias = {
         {
             nome:"Papel higiênico - Pack 24",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/papel-higienico-pack24.jpg",
             id: 25
         },
         {
             nome:"Sabonete líquido",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/sabonete-liquido-natura.jpg",
             id: 26
         },
         {
             nome:"Sabonete - Lux",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/sabonete-lux.jpg",
             id: 27
         },
         {
             nome:"Bom Ar - Spray",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/bom-ar-spray.jpg",
             id: 28
         },
     ],
@@ -314,25 +313,25 @@ let categorias = {
         {
             nome:"Jogo de Cama - Padrão",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/jogo-de-cama.jpg",
             id: 29
         },
         {
             nome:"Jogo de Cama - Hercovitch",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/jogo-de-cama-hercovitch.jpg",
             id: 30
         },
         {
             nome:"Travesseiros",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/travesseiros.jpg",
             id: 31
         },
         {
             nome:"Edredom",
             preco: 15,
-            img: "imgs/lasanha_a_bolonhesa.jpg",
+            img: "imgs/edredom.jpg",
             id: 32
         },
     ],
