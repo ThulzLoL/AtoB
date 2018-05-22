@@ -3,15 +3,15 @@ let menuBtn = document.querySelector('.menuBtn');
 function menuToogle() {
     let menu = document.querySelector("nav");
     let formLogIn = document.querySelector('.log');
-   
-    if (menu.style.display !== "flex") {
-        menu.style.display = "flex";
-        menu.style.flexDirection = "column";
-        menu.style.width = "40%";
+    
+    if (!menu.classList.contains('displayed')){
+        menu.classList.add('displayed');
     }
     else {
-        menu.style.display = "none";
-        menu.style.width = "0px;";
+        if(menu.classList.contains('displayed')) {
+            menu.classList.remove('displayed');        
+        }
+        
         formLogIn.style.diplay = "none";
         formLogIn.style.width = "0";
     }
