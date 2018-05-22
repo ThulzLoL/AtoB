@@ -64,23 +64,24 @@ header {
     display: block;
     margin: 0 auto; }
 
-.pgOne .banner {
-  width: 100%; }
-  .pgOne .banner img {
+.pgOne {
+  display: none; }
+  .pgOne .banner {
+    width: 100%; }
+    .pgOne .banner img {
+      width: 100%;
+      display: block;
+      margin: auto; }
+  .pgOne .cat {
     width: 100%;
-    display: block;
-    margin: auto; }
-
-.pgOne .cat {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap; }
-  .pgOne .cat img {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 0; }
+    display: flex;
+    flex-wrap: wrap; }
+    .pgOne .cat img {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      margin: 0;
+      padding: 0; }
 
 @media only screen and (min-width: 780px) {
   .cat {
