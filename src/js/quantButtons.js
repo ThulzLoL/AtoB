@@ -15,19 +15,31 @@ function subtract(){
     prodValue.innerHTML = `R$: ${prodPrice * quantity}`;
 }
 
-let valueQuant2 = document.querySelector(".valueQuant2");
-let cartPrice = document.querySelector(".cartPrice");
+let itemTotal = document.querySelector(".itensTotal");
+let valorTotal = document.querySelector(".valorTotal2");
 
 let prodPrice2;
-let quantity2 = 1;
 
-function add2(){
+function add2(selector, preco){
+    let valueQuant2 = document.querySelector(`.valueQuant2${selector}`);
+    let cartPrice = document.querySelector(`.cartPrice${selector}`);
+    let quantity2 = Number.parseInt(valueQuant2.innerHTML);
+    let price = Number.parseInt(valorTotal.innerHTML);
     quantity2++;
+    itemTotal.innerHTML++
     valueQuant2.innerHTML = quantity2;
-    cartPrice.innerHTML = `R$: ${cartPrice * quantity2}`;
+    valorTotal.innerHTML = price + preco;
+    cartPrice.innerHTML = `R$: ${preco * quantity2}`;
 }
-function subtract2(){
+
+function subtract2(selector, preco){
+    let valueQuant2 = document.querySelector(`.valueQuant2${selector}`);
+    let cartPrice = document.querySelector(`.cartPrice${selector}`);
+    let quantity2 = Number.parseInt(valueQuant2.innerHTML);
+    let price = Number.parseInt(valorTotal.innerHTML);
     quantity2--;
+    itemTotal.innerHTML--
     valueQuant2.innerHTML = quantity2;
-    cartPrice.innerHTML = `R$: ${cartPrice * quantity2}`;
+    valorTotal.innerHTML = price - preco;
+    cartPrice.innerHTML = `R$: ${preco * quantity2}`;
 }

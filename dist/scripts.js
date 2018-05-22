@@ -1,28 +1,52 @@
 let carrinho = [];
 
+let cartUni = document.querySelector(".cartUni");
+let valorTotalCarrinho = 0
 function addCart (id){
     let produtoProcurado;
     for(let categoria of Object.values(categorias)){
         for(let produto of categoria){
             if (produto.id == id){
+                itemTotal.innerHTML++
+                valorTotalCarrinho = valorTotalCarrinho + produto.preco
+                valorTotal.innerHTML = valorTotalCarrinho;
                 produtoProcurado = produto;
-            }
+                cartUni.innerHTML += `<div class="cartProd">
+                <div class="quant2">
+                <button class="subtract21" produto-id="${produto.id}" onclick="subtract2(${carrinho.length - 1}, ${produto.preco})">-</button>
+                <span class="valueQuant2${carrinho.length - 1}">1</span>
+                <button class="add21" produto-id="${produto.id}" onclick="add2(${carrinho.length - 1}, ${produto.preco})">+</button>
+                </div>
+                <div class="cartName">${produto.nome}</div>
+                <div class="cartPrice${carrinho.length - 1}">R$: ${produto.preco}</div>
+                </div>`
 
+               /* let add21 = document.querySelectorAll(".add21");
+                let subtract21 = document.querySelectorAll(".subtract21");
+                for(let adds of add21){
+                    adds.onclick = add2(`${produto.preco}`)
+                }
+                for(let subtracts of subtract21){
+                    subtracts.onclick = subtract2(`${produto.preco}`)
+                }*/
+                
+            }
+            
         }
     }
-
-
+    
+    
     if(produtoProcurado){
         carrinho.push(produtoProcurado);
     }
-
+    
     let soma = somarPrecos();
 }
 
 function removeFromCart (id) {
     let i = 0;
     let indexToRemove = 0;
-
+    
     for (let produto of carrinho){
         if (produto.id == id){
             indexToRemove = i;
@@ -30,9 +54,9 @@ function removeFromCart (id) {
         
         i++;
     }
-
+    
     carrinho.splice(indexToRemove, 1);
-
+    
     let soma = somarPrecos();
 }
 
@@ -42,7 +66,7 @@ function somarPrecos () {
     for (let produto of carrinho){
         soma += produto.preco;
     }
-
+    
     return soma;
 }
 
@@ -76,9 +100,9 @@ function changePage1(){
 }
 let pgTwo = document.querySelector(".pgTwo");
 let pgThree = document.querySelector(".pgThree");
-let prodImage = document.querySelector(".prodImg")
-let prodName = document.querySelector(".prodName")
-
+let prodImage = document.querySelector(".prodImg");
+let prodName = document.querySelector(".prodName");
+let cartFive = document.querySelector(".cartFive");
 
 function changePage23(){
     console.log(this.getAttribute('data-id-produto'));
@@ -88,7 +112,7 @@ function changePage23(){
     prodPrice = this.getAttribute('data-value-produto');
     pgTwo.style = "display: none";
     pgThree.style = "display: block";
-
+    cartFive.onclick = `addCart(${this.getAttibute('data-id-produto')})`;
 }
 
 let imagens = [];
@@ -403,21 +427,33 @@ function subtract(){
     prodValue.innerHTML = `R$: ${prodPrice * quantity}`;
 }
 
-let valueQuant2 = document.querySelector(".valueQuant2");
-let cartPrice = document.querySelector(".cartPrice");
+let itemTotal = document.querySelector(".itensTotal");
+let valorTotal = document.querySelector(".valorTotal2");
 
 let prodPrice2;
-let quantity2 = 1;
 
-function add2(){
+function add2(selector, preco){
+    let valueQuant2 = document.querySelector(`.valueQuant2${selector}`);
+    let cartPrice = document.querySelector(`.cartPrice${selector}`);
+    let quantity2 = Number.parseInt(valueQuant2.innerHTML);
+    let price = Number.parseInt(valorTotal.innerHTML);
     quantity2++;
+    itemTotal.innerHTML++
     valueQuant2.innerHTML = quantity2;
-    cartPrice.innerHTML = `R$: ${cartPrice * quantity2}`;
+    valorTotal.innerHTML = price + preco;
+    cartPrice.innerHTML = `R$: ${preco * quantity2}`;
 }
-function subtract2(){
+
+function subtract2(selector, preco){
+    let valueQuant2 = document.querySelector(`.valueQuant2${selector}`);
+    let cartPrice = document.querySelector(`.cartPrice${selector}`);
+    let quantity2 = Number.parseInt(valueQuant2.innerHTML);
+    let price = Number.parseInt(valorTotal.innerHTML);
     quantity2--;
+    itemTotal.innerHTML--
     valueQuant2.innerHTML = quantity2;
-    cartPrice.innerHTML = `R$: ${cartPrice * quantity2}`;
+    valorTotal.innerHTML = price - preco;
+    cartPrice.innerHTML = `R$: ${preco * quantity2}`;
 }
 
 const textSearch = document.querySelector(".textSearch");
