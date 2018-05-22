@@ -1,6 +1,5 @@
 
 let imagens = [];
-let ids = [];
 
 function createFunc(produto){
     produtosSection.innerHTML += `<div class="product">

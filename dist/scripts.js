@@ -15,9 +15,38 @@ function addCart (id){
     if(produtoProcurado){
         carrinho.push(produtoProcurado);
     }
-    
-        
+
+    let soma = somarPrecos();
 }
+
+function removeFromCart (id) {
+    let i = 0;
+    let indexToRemove = 0;
+
+    for (let produto of carrinho){
+        if (produto.id == id){
+            indexToRemove = i;
+        }
+        
+        i++;
+    }
+
+    carrinho.splice(indexToRemove, 1);
+
+    let soma = somarPrecos();
+}
+
+function somarPrecos () {
+    let soma = 0;
+    
+    for (let produto of carrinho){
+        soma += produto.preco;
+    }
+
+    return soma;
+}
+
+
 let pgOne = document.querySelector(".pgOne");
 
 function changePage12(){
@@ -48,7 +77,6 @@ function changePage23(){
 }
 
 let imagens = [];
-let ids = [];
 
 function createFunc(produto){
     produtosSection.innerHTML += `<div class="product">
@@ -77,7 +105,6 @@ function filter(categoria){
     let produtos = categorias[categoria];
     produtosSection.innerHTML = null;
     imagemFeature.src = `imgs/${categoria}.jpg`
-    ids = [];
     for(let produto of produtos){
         createFunc(produto);
     }
@@ -100,6 +127,13 @@ function signIn(){
 } 
 
 loginBtn.onclick = signIn;
+let mainBanheiro = document.querySelector(".mainBanheiro")
+function changePageCreate(){
+    changePage12();
+    filter();
+}
+
+
 let menuBtn = document.querySelector('.menuBtn');
 
 function menuToogle() {

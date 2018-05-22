@@ -76,7 +76,7 @@ header {
   transform: translateX(0%); }
 
 .pgOne {
-  display: none; }
+  display: block; }
   .pgOne .banner {
     width: 100%; }
     .pgOne .banner img {
@@ -106,7 +106,7 @@ header {
     overflow: hidden; } }
 
 footer {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -165,6 +165,7 @@ body {
     background-color: #f16365; }
 
 .pgTwo {
+  display: none;
   background-color: #dedede; }
   .pgTwo .feature {
     width: 100%;
