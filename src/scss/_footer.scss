@@ -1,0 +1,32 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #f16365;
+    height: 150px;
+    color: white;
+
+    .footerlinks{
+        display: flex;
+        flex-direction: column;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        margin: 5px 30px;
+    }
+
+    .socialfooter{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        margin: 5px 30px;
+    }
+}

@@ -1,6 +1,7 @@
 @import 'header';
 @import 'login';
 @import 'pgone';
+@import 'footer';
 
 body{
     margin: 0;
@@ -30,6 +31,19 @@ body{
 }
 .filters{
     text-align: center;
+
+    button{
+        border: 0;
+        box-shadow: 0;
+        background-color: #233c7b;
+        height: 40px;
+        margin: 15px 15px;
+        color: white;
+    }
+
+    button:hover{
+        background-color: #f16365;
+    }
 }
 .pgTwo{
     background-color:#dedede;
