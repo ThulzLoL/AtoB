@@ -7,10 +7,10 @@ let quantity = 1;
 function add(){
     quantity++;
     valueQuant.innerHTML = quantity;
-    prodValue.innerHTML = `R$ ${prodPrice * quantity}`;
+    prodValue.innerHTML = `R$: ${prodPrice * quantity}`;
 }
 function subtract(){
     quantity--;
     valueQuant.innerHTML = quantity;
-    prodValue.innerHTML = `R$ ${prodPrice * quantity}`;
+    prodValue.innerHTML = `R$: ${prodPrice * quantity}`;
 }

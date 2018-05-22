@@ -68,9 +68,9 @@ let prodName = document.querySelector(".prodName")
 function changePage23(){
     console.log(this.getAttribute('data-id-produto'));
     prodImage.src = this.getAttribute('data-img-produto');
-    prodValue.innerHTML = this.getAttribute('data-value-produto');
+    prodValue.innerHTML = `R$: ${this.getAttribute('data-value-produto')}`;
     prodName.innerHTML = this.getAttribute('data-nome-produto');
-    prodPrice = prodValue.innerHTML;
+    prodPrice = this.getAttribute('data-value-produto');
     pgTwo.style = "display: none";
     pgThree.style = "display: block";
 
@@ -380,12 +380,12 @@ let quantity = 1;
 function add(){
     quantity++;
     valueQuant.innerHTML = quantity;
-    prodValue.innerHTML = `R$ ${prodPrice * quantity}`;
+    prodValue.innerHTML = `R$: ${prodPrice * quantity}`;
 }
 function subtract(){
     quantity--;
     valueQuant.innerHTML = quantity;
-    prodValue.innerHTML = `R$ ${prodPrice * quantity}`;
+    prodValue.innerHTML = `R$: ${prodPrice * quantity}`;
 }
 
 const textSearch = document.querySelector(".textSearch");
