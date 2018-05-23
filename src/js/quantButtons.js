@@ -1,18 +1,18 @@
 let valueQuant = document.querySelector(".valueQuant");
 let prodValue = document.querySelector(".prodValue");
-
+let prodValue2 = document.querySelector(".prodValue2");
 let prodPrice;
 let quantity = 1;
 
 function add(){
     quantity++;
     valueQuant.innerHTML = quantity;
-    prodValue.innerHTML = `R$: ${prodPrice * quantity}`;
+    prodValue2.innerHTML = prodPrice * quantity;
 }
 function subtract(){
     quantity--;
     valueQuant.innerHTML = quantity;
-    prodValue.innerHTML = `R$: ${prodPrice * quantity}`;
+    prodValue2.innerHTML = prodPrice * quantity;
 }
 
 let itemTotal = document.querySelector(".itensTotal");

@@ -6,11 +6,13 @@ let cartFive = document.querySelector(".cartFive");
 let cart3Page;
 function onclickCart3 (){
     addCart(cart3Page);
+    valorTotal.innerHTML = Number.parseInt(valorTotal.innerHTML) + Number.parseInt(prodValue2.innerHTML) - 15;
+    itemTotal.innerHTML = Number.parseInt(itemTotal.innerHTML) + Number.parseInt(valueQuant.innerHTML) - 1;
 }
 function changePage23(){
     cart3Page = this.getAttribute('data-id-produto');
     prodImage.src = this.getAttribute('data-img-produto');
-    prodValue.innerHTML = `R$: ${this.getAttribute('data-value-produto')}`;
+    prodValue2.innerHTML = this.getAttribute('data-value-produto');
     prodName.innerHTML = this.getAttribute('data-nome-produto');
     prodPrice = this.getAttribute('data-value-produto');
     pgTwo.style = "display: none";
