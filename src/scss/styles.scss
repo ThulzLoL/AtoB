@@ -217,7 +217,7 @@ body{
             width: 25%;
         }
     }
-    .cartProd{
+    div[class*="cartProd"]{
         display:flex;
     }
     .quant2{
@@ -241,14 +241,14 @@ body{
                 margin: auto;
             }
         }
-        .cartName{
+        div[class*="cartName"]{
             padding-top: 5px;
             padding-bottom: 5px;
             border: solid white 1px;
             text-align: center;
             width: 50%;
         }
-        .cartPrice{
+        div[class*="cartPrice"]{
             padding-top: 5px;
             padding-bottom: 5px;
             border: solid white 1px;

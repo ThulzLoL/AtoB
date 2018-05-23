@@ -11,7 +11,7 @@ function addCart (id){
                 valorTotalCarrinho = valorTotalCarrinho + produto.preco
                 valorTotal.innerHTML = valorTotalCarrinho;
                 produtoProcurado = produto;
-                cartUni.innerHTML += `<div class="cartProd">
+                cartUni.innerHTML += `<div class="cartProd${carrinho.length - 1}">
                 <div class="quant2">
                 <button class="subtract21" produto-id="${produto.id}" onclick="subtract2(${carrinho.length - 1}, ${produto.preco})">-</button>
                 <span class="valueQuant2${carrinho.length - 1}">1</span>
@@ -103,16 +103,20 @@ let pgThree = document.querySelector(".pgThree");
 let prodImage = document.querySelector(".prodImg");
 let prodName = document.querySelector(".prodName");
 let cartFive = document.querySelector(".cartFive");
-
+let cart3Page;
+function onclickCart3 (){
+    addCart(cart3Page);
+}
 function changePage23(){
-    console.log(this.getAttribute('data-id-produto'));
+    cart3Page = this.getAttribute('data-id-produto');
     prodImage.src = this.getAttribute('data-img-produto');
     prodValue.innerHTML = `R$: ${this.getAttribute('data-value-produto')}`;
     prodName.innerHTML = this.getAttribute('data-nome-produto');
     prodPrice = this.getAttribute('data-value-produto');
     pgTwo.style = "display: none";
     pgThree.style = "display: block";
-    cartFive.onclick = `addCart(${this.getAttibute('data-id-produto')})`;
+    cartFive.onclick = onclickCart3;
+    console.log(cart3Page)
 }
 
 let imagens = [];
@@ -445,6 +449,7 @@ function add2(selector, preco){
 }
 
 function subtract2(selector, preco){
+    let control = document.querySelector(`.cartProd${selector}`)
     let valueQuant2 = document.querySelector(`.valueQuant2${selector}`);
     let cartPrice = document.querySelector(`.cartPrice${selector}`);
     let quantity2 = Number.parseInt(valueQuant2.innerHTML);
@@ -454,6 +459,10 @@ function subtract2(selector, preco){
     valueQuant2.innerHTML = quantity2;
     valorTotal.innerHTML = price - preco;
     cartPrice.innerHTML = `R$: ${preco * quantity2}`;
+    if(quantity2 <= 0){
+        control.parentNode.removeChild(control);
+        Number.parseInt(valorTotal.innerHTML) - preco;
+    }
 }
 
 const textSearch = document.querySelector(".textSearch");

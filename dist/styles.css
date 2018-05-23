@@ -306,7 +306,7 @@ body {
       border: solid white 1px;
       text-align: center;
       width: 25%; }
-  .myCart .cartProd {
+  .myCart div[class*="cartProd"] {
     display: flex; }
   .myCart .quant2 {
     padding-top: 5px;
@@ -326,13 +326,13 @@ body {
       width: 23px;
       border-radius: 72%;
       margin: auto; }
-  .myCart .cartName {
+  .myCart div[class*="cartName"] {
     padding-top: 5px;
     padding-bottom: 5px;
     border: solid white 1px;
     text-align: center;
     width: 50%; }
-  .myCart .cartPrice {
+  .myCart div[class*="cartPrice"] {
     padding-top: 5px;
     padding-bottom: 5px;
     border: solid white 1px;

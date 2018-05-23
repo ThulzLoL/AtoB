@@ -33,6 +33,7 @@ function add2(selector, preco){
 }
 
 function subtract2(selector, preco){
+    let control = document.querySelector(`.cartProd${selector}`)
     let valueQuant2 = document.querySelector(`.valueQuant2${selector}`);
     let cartPrice = document.querySelector(`.cartPrice${selector}`);
     let quantity2 = Number.parseInt(valueQuant2.innerHTML);
@@ -42,4 +43,8 @@ function subtract2(selector, preco){
     valueQuant2.innerHTML = quantity2;
     valorTotal.innerHTML = price - preco;
     cartPrice.innerHTML = `R$: ${preco * quantity2}`;
+    if(quantity2 <= 0){
+        control.parentNode.removeChild(control);
+        Number.parseInt(valorTotal.innerHTML) - preco;
+    }
 }

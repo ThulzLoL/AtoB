@@ -11,7 +11,7 @@ function addCart (id){
                 valorTotalCarrinho = valorTotalCarrinho + produto.preco
                 valorTotal.innerHTML = valorTotalCarrinho;
                 produtoProcurado = produto;
-                cartUni.innerHTML += `<div class="cartProd">
+                cartUni.innerHTML += `<div class="cartProd${carrinho.length - 1}">
                 <div class="quant2">
                 <button class="subtract21" produto-id="${produto.id}" onclick="subtract2(${carrinho.length - 1}, ${produto.preco})">-</button>
                 <span class="valueQuant2${carrinho.length - 1}">1</span>
